@@ -1,0 +1,27 @@
+# Ignore version control
+.git/**
+.gitignore
+
+# Ignore dependencies
+node_modules/**
+
+# Ignore configuration
+.claspignore
+package.json
+package-lock.json
+tsconfig.json
+
+# Ignore documentation
+README.md
+docs/**
+
+# Ignore development files
+*.md
+LICENSE
+
+# Ignore test files
+test/**
+tests/**
+__tests__/**
+*.test.js
+*.spec.js
