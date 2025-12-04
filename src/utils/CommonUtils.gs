@@ -73,6 +73,10 @@ function writeSheetData(spreadsheetId, sheetName, data, startCell = 'A1') {
       throw new Error(`Sheet "${sheetName}" not found`);
     }
     
+    if (!data || data.length === 0 || !data[0] || data[0].length === 0) {
+      throw new Error('Data is empty or invalid');
+    }
+    
     const range = sheet.getRange(startCell);
     range.offset(0, 0, data.length, data[0].length).setValues(data);
     logWithTimestamp(`Wrote ${data.length} rows to ${sheetName}`, 'INFO');

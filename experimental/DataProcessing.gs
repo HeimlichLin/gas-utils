@@ -46,6 +46,10 @@ function jsonToCsv(jsonData) {
       return '';
     }
     
+    if (!jsonData[0] || typeof jsonData[0] !== 'object') {
+      return '';
+    }
+    
     const headers = Object.keys(jsonData[0]);
     const csvLines = [headers.join(',')];
     
