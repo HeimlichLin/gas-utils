@@ -1,0 +1,35 @@
+{
+  "name": "gas-utils",
+  "version": "1.0.0",
+  "description": "Personal Google Apps Script development tools and experimental code snippets backup",
+  "main": "src/utils/CommonUtils.gs",
+  "scripts": {
+    "push": "clasp push",
+    "pull": "clasp pull",
+    "open": "clasp open",
+    "deploy": "clasp deploy",
+    "logs": "clasp logs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeimlichLin/gas-utils.git"
+  },
+  "keywords": [
+    "google-apps-script",
+    "gas",
+    "utilities",
+    "automation",
+    "google-sheets",
+    "google-drive"
+  ],
+  "author": "HeimlichLin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HeimlichLin/gas-utils/issues"
+  },
+  "homepage": "https://github.com/HeimlichLin/gas-utils#readme",
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.83"
+  }
+}
