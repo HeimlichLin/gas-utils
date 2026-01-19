@@ -254,12 +254,15 @@ function extractHoldingsFromJson(html) {
               log('從 assetDB.Details.TranDate 提取日期: ' + dateStr);
             }
             
-            holdings.push({
-              stockCode: item.DetailCode || '',
-              stockName: item.DetailName || '',
-              shares: parseInt(item.Share || 0, 10),
-              weight: parseFloat(item.NavRate || 0)
-            });
+            // 過濾空的 stockCode，避免後續比對誤判
+            if (item.DetailCode && String(item.DetailCode).trim() !== '') {
+              holdings.push({
+                stockCode: item.DetailCode,
+                stockName: item.DetailName || '',
+                shares: parseInt(item.Share || 0, 10),
+                weight: parseFloat(item.NavRate || 0)
+              });
+            }
           });
         }
       });
